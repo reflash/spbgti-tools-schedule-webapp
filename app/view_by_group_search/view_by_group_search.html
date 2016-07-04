@@ -1,0 +1,8 @@
+<form id="view_by_group_search" name="form">
+    <label for="groupSelect"> Groups: </label>
+    <select name="groupSelect" id="groupSelect"
+            ng-model="groupModel"
+            ng-options="group.number for group in groups | orderBy: 'number'"
+            ng-change="updateSchedule(groupModel)" class="form-control">
+    </select>
+</form>

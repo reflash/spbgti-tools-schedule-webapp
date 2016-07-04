@@ -1,61 +1,21 @@
-'use strict';
+'use strict'
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
+    'ngRoute',
+    'config',
+    'myApp.view_by_group_search',
+    'myApp.version'
 ]).
+
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+    $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+    $routeProvider.otherwise({redirectTo: '/view_by_group_search'});
 }]);
 
-var app = angular.module('app',[]);
 
-app.controller('GroupController', ['$scope', '$http', function($scope, $http) {
-    $scope.groups = [];
-    $http.get('/api/get_all_groups')
-}]);
-
-var app = angular.module('appModule', ['ngRoute']);
-
-app.config(['$routeProvider',
-  function ($routeProvider) {
-      $routeProvider.
-        when('/', {
-            templateUrl: 'templates/list.html',
-            controller: 'listController'
-        }).
-        when('/create', {
-            templateUrl: 'templates/create.html',
-            controller: 'createController'
-        }).
-        when('/edit/:key', {
-            templateUrl: 'templates/edit.html',
-            controller: 'editController'
-        }).
-        when('/delete/:key', {
-            templateUrl: 'templates/delete.html',
-            controller: 'deleteController'
-        }).
-        otherwise({
-            redirectTo: '/'
-        });
-  }]);
-
-app.controller('listController', function ($scope, $http) {
-    $scope.keys = [];
-    $http.get('KeyValue/GetAll').then(
-       function (result) {
-           $scope.keys = result.data;
-       }, function (error) {
-           alert(error.message);
-       }
-    );
-});
+/* EXAMPLES
 
 app.controller('createController', function ($scope, $http, $location) {
     $scope.key = "";
@@ -120,3 +80,4 @@ app.controller('deleteController', function ($scope, $http, $location, $routePar
         });
     }
 });
+*/
