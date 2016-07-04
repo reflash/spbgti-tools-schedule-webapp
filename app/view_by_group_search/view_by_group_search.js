@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('myApp.view_by_group_search', ['ngRoute'])
+angular.module('myApp.view_by_group_search', ['ngRoute', 'config'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view_by_group_search', {
