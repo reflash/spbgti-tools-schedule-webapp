@@ -6,6 +6,7 @@ notifications:
   slack: spbgti:DISw2DtYSQ3gQ8jB9NvTbSYG
 
 before_script:
+  - sh build.sh
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start
   - npm start > /dev/null &
