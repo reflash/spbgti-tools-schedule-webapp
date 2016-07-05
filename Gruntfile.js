@@ -27,7 +27,7 @@ module.exports = function(grunt) {
                 constants: {
                     ENV: {
                         name: 'staging',
-                        apiEndpoint: 'https://spbgti-tools-schedule-staging.herokuapp.com/'
+                        apiEndpoint: 'https://spbgti-tools-schedule-staging.herokuapp.com/api'
                     }
                 }
             },
@@ -38,7 +38,7 @@ module.exports = function(grunt) {
                 constants: {
                     ENV: {
                         name: 'production',
-                        apiEndpoint: 'https://spbgti-tools-schedule.herokuapp.com/'
+                        apiEndpoint: 'https://spbgti-tools-schedule.herokuapp.com/api'
                     }
                 }
             }
