@@ -5,6 +5,10 @@
   "description": "A web front-end for spbgti-tools-schedule service",
   "repository": "https://github.com/spbgti/spbgti-tools-schedule-webapp",
   "license": "MIT",
+  "engines": {
+    "node" : "4.4"
+  },
+  
   "devDependencies": {
     "bower": "^1.7.7",
     "http-server": "^0.9.0",
