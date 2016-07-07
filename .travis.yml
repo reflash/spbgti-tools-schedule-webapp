@@ -23,6 +23,7 @@ deploy:
   api_key:
     secure: "heHQJWrRk+e4w3RlUlAFKWdz/VGt7fHGmFiEaukAAh367lfX2E39nq6Vhu7XB3VrT8C8aQQw3LIbmpmQKUdSLlWnRfxqP6Jy4Md8eHWy8SEwEdFEX82M/3SciAxHTHd0c88/cQgD+6ZjIm5gmalh0oEjcwIrB597BuXnENflVGAlnB+ULLBzt6rp8mtTpKhaYF9tOddg4oOaEe7hGO1m190X5i+okkWnjJSzZwC7yjt0GjHrQ1CbPHrHehe6uye84jJ0K640ycWJMfu6m3ErEhMCgzSrro6c7qb2PFFFcLDm/iTbh1WUntSepkPyDfWWFbx0oZmHXTV8diGOVMOLBQL1rAi5NVNQE4WR9awTX+AU8LwuHyXWdASkQiyXmo4TWaFAl2jgmJ8YbTkz4qb5n6lTnRJqSQEpsErMfTvkR/Lbvah9Hm/6gO5IB2M5yhT0AP6cOP3916vLjL98bN+YOYQ0fNCPTYbCd4aPlhGdWysf9wL+IRyLJezF2nrCW2bmk0TG8aD7wlTnBCsLuTi2NX8cXADw83ivZ0orlBsyLdi7LThrIhSuWXJDUuvhUDOqWZI9ulMKEWKVNAY2STtQiM34/He4zdVTmTdYSXtotAaDMOz3jl0scO7ywEnax2oyY18BZ9hdkUEcdnwc9TtBEh38hdH0LdZG4jZbPqbzglk="
   app: spbgti-tools-schedule-webapp
+  skip_cleanup: true
   run:
     - "sh build.sh --app spbgti-tools-schedule-webapp"
   after_deploy:
