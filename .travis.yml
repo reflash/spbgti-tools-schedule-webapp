@@ -15,7 +15,7 @@ before_script:
 
 script:
   - node_modules/.bin/karma start karma.conf.js --no-auto-watch --single-run --reporters=dots --browsers=Firefox
-  - node_modules/.bin/protractor e2e-tests/protractor.conf.js --browser=firefox
+# Currently disable protractor  - node_modules/.bin/protractor e2e-tests/protractor.conf.js --browser=firefox
 
 # Add deploy step. script build.sh should be run after deployment on target site
 deploy:
